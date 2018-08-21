@@ -1,0 +1,59 @@
+//@import "crds-styles-sprockets";
+
+//New shared header
+.cont-logo-v2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+a.logo-v2 {
+  padding: 1rem 0;
+  svg {
+    width: 180px;
+  }
+}
+.cont-subscribe .btn:hover {
+    background:rgba(240,240,240,0.75);
+    text-decoration: none;
+}
+
+.mobile-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #eee;
+  z-index: 4;
+}
+.mobile-nav dl, ol, ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.mobile-nav>ul, .mobile-nav>ul>li {
+  display: flex;
+}
+.mobile-nav>ul {
+  justify-content: space-between;
+  height: 4.4rem;
+}
+.mobile-nav>ul>li {
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 25%;
+}
+.mobile-nav .with-submenu {
+  position: relative;
+}
+.mobile-nav>ul>li:nth-child(n+2) {
+  border-left: 1px solid #eee;
+}
+.mobile-nav .icon {
+    display: block;
+    margin: auto
+}
+.mobile-nav span {
+  font-size: 80%;
+}

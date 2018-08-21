@@ -24,3 +24,9 @@ gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Performance-booster for watching directories on Windows
 gem "wdm", "~> 0.1.0" if Gem.win_platform?
+
+group :jekyll_plugins do
+  gem 'jekyll-assets'
+  # Must be loaded after jekyll-assets, otherwise the assets won't be discoverable.
+  gem 'crds-styles', '~> 3.0.3', git: 'https://github.com/crdschurch/crds-styles.git'
+end
