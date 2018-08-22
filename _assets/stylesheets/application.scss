@@ -22,13 +22,13 @@ a.logo-v2 {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background: #fff;
+  background-color: #fdfdfd;
   border-top: 1px solid #eee;
   z-index: 4;
   .btn {
     margin: 0;
     border: none;
-    padding: 10px 16px;
+    padding: 12px 16px;
     :active, :focus {outline: none;}
   }
 }
