@@ -25,6 +25,9 @@ a.logo-v2 {
   background-color: #fdfdfd;
   z-index: 55;
   box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+  &.open {
+    box-shadow: none;
+  }
   .btn {
     margin: 0;
     border: none;
@@ -109,13 +112,25 @@ a.logo-v2 {
   transition: opacity .15s,height 0s;
 }
 .nav-menu ul li a {
-  border-bottom: 1px solid #3D5667;
+  border-top: 1px solid #3D5667;
   color: #A5BDCC;
   display: block;
   padding: 1rem;
   margin: 0 1rem;
   position: relative;
-  transition: all .3s ease;
+}
+
+.nav-menu ul li:first-child a {
+  border-top: none;
+}
+.nav-menu ul li ul li a {
+  display: block;
+  border: none;
+  padding: 0.8rem 2rem;
+  position: relative;
+}
+.nav-menu ul li ul li:last-child a {
+  margin-bottom: 1rem;
 }
 .nav-menu ul li a:hover {
   text-decoration: none;
