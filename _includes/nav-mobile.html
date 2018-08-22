@@ -1,10 +1,19 @@
 <nav class="mobile-nav">
   <ul>
     <li>
-      <button class="btn btn-link secondary" type="button">
+      <button id="menu" class="btn btn-link secondary" type="button">
         <span class="sr-only">Menu</span>
+
+        <div id="menu-content">
         {% include icon-menu.svg.html %}
         <span>Menu</span>
+        </div>
+
+        <div id="close-content">
+          {% include icon-close.svg.html %}
+          <span>Close</span>
+        </div>
+
       </button>
     </li>
     <li>

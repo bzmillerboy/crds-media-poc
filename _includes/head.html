@@ -2,9 +2,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.section == "home" %}{{ site.title }}{% else %}{{ page.title | default: site.title }}{% endif %}</title>
-  <link rel="stylesheet" href="//d1tmclqz61gqwd.cloudfront.net/styles/crds-styles-2.0.0.min.css">
-  <link rel="stylesheet" href="//media.crossroads.net/assets/application-ee2397cfaf6454f2b3f24c15ce23ff9140ffac3eaa0e4d50aa109567fa3eb99d.css">
+  <link rel="stylesheet" href="crds-styles-3.0.3.min.css">
+  <link rel="stylesheet" href="media.css">
   {% asset application.scss !integrity %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+  <script src="nav.js"></script>
 
   {% if jekyll.environment == 'production' and site.analytics %}
     {% include analytics.html %}
