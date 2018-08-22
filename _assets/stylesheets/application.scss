@@ -10,7 +10,7 @@
 a.logo-v2 {
   padding: 1rem 0;
   svg {
-    width: 180px;
+    width: 130px;
   }
 }
 .cont-subscribe .btn:hover {
@@ -25,6 +25,12 @@ a.logo-v2 {
   background: #fff;
   border-top: 1px solid #eee;
   z-index: 4;
+  .btn {
+    margin: 0;
+    border: none;
+    padding: 10px 16px;
+    :active, :focus {outline: none;}
+  }
 }
 .mobile-nav dl, ol, ul {
   margin: 0;
@@ -36,7 +42,6 @@ a.logo-v2 {
 }
 .mobile-nav>ul {
   justify-content: space-between;
-  height: 4.4rem;
 }
 .mobile-nav>ul>li {
   flex-direction: column;
@@ -51,8 +56,9 @@ a.logo-v2 {
   border-left: 1px solid #eee;
 }
 .mobile-nav .icon {
-    display: block;
-    margin: auto
+  display: block;
+  margin: auto;
+  margin-bottom: 0.1rem;
 }
 .mobile-nav span {
   font-size: 80%;
