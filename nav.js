@@ -1,7 +1,7 @@
 
 $(document).ready(function () {
   
-  $("#menu").click(function () {
+  $("#menu").mouseup(function () {
     $(this).toggleClass("active");
     $("#nav-menu").toggleClass("open");
     $("#mobile-nav").toggleClass("open");
