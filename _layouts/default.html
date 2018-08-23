@@ -11,8 +11,8 @@ layout: compress
   <body>
 
     {% include header.html %}
-    {% include nav-mobile.html %}
-    {% include nav-menu-mobile.html %}
+    {% include mobile-navbar.html %}
+    {% include mobile-megamenu.html %}
     <main>
 
       {{ content }}
@@ -21,6 +21,20 @@ layout: compress
 
     {% include footer.html %}
 
+  <script>
+    window.FCSP = '568c917f86371b8d22261f6c734e0e74';
+  </script>
+  <script src="https://chat-assets.frontapp.com/v1/chat.bundle.js"></script>
+  <script>
+
+    FrontChat('init', {
+      useDefaultLauncher: false,
+    });
+
+  </script>
+
   </body>
+
+
 
 </html>

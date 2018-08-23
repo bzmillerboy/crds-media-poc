@@ -3,9 +3,15 @@ $(document).ready(function () {
   
   $("#menu").mouseup(function () {
     $(this).toggleClass("active");
-    $("#nav-menu").toggleClass("open");
-    $("#mobile-nav").toggleClass("open");
+    $("#mobile-megamenu").toggleClass("open");
+    $("#mobile-navbar").toggleClass("open");
   });
+
+  $("#chat").click(function () {
+    FrontChat('show');
+  });
+
+  
 
 });
 

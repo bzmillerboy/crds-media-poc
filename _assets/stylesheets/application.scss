@@ -18,7 +18,8 @@ a.logo-v2 {
     text-decoration: none;
 }
 
-.mobile-nav {
+//Mobile Navbar
+.mobile-navbar {
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -38,7 +39,7 @@ a.logo-v2 {
     #close-content {
       display: none;
     }
-    }
+  }
   .btn:active, .btn.active {
     outline: none;
     background-color: #1D3647;
@@ -55,43 +56,41 @@ a.logo-v2 {
       display: none;
     }
   }
-}
-.mobile-nav dl, ol, ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-.mobile-nav>ul, .mobile-nav>ul>li {
-  display: flex;
-}
-.mobile-nav>ul {
-  justify-content: space-between;
-}
-.mobile-nav>ul>li {
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  width: 25%;
-}
-.mobile-nav .with-submenu {
-  position: relative;
-}
-.mobile-nav>ul>li:nth-child(n+2) {
-  border-left: 1px solid #eee;
-}
-.mobile-nav .icon {
-  display: block;
-  margin: auto;
-  margin-bottom: 0.1rem;
-}
-.mobile-nav span {
-  font-size: 80%;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;  
+  }
+  > ul {
+    display: flex;
+  }
+  > ul > li {
+    display: flex;
+  }
+  > ul {
+    justify-content: space-between;
+  }
+  > ul > li {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 25%;
+  }
+  > ul > li:nth-child(n+2) {
+    border-left: 1px solid #eee;
+  }
+  .icon {
+    display: block;
+    margin: auto;
+    margin-bottom: 0.1rem;
+  }
+  span {
+    font-size: 80%;
+  }
 }
 
-
-
-
-.nav-menu {
+//Mobile Megamenu
+.mobile-megamenu {
   position: fixed;
   z-index: 50;
   top: 0;
@@ -104,42 +103,61 @@ a.logo-v2 {
   overflow: hidden;
   overflow: scroll;
   transition: opacity .15s,height 0s .15s;
-  padding-bottom: 8rem; 
-}
-.nav-menu.open {
-  height: 100%;
-  opacity: 1;
-  transition: opacity .15s,height 0s;
-}
-.nav-menu ul li a {
-  border-top: 1px solid #3D5667;
-  color: #A5BDCC;
-  display: block;
-  padding: 1rem;
-  margin: 0 1rem;
-  position: relative;
-}
+  padding-bottom: 8rem;
+  &.open {
+    height: 100%;
+    opacity: 1;
+    transition: opacity .15s,height 0s;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;  
+  }
+  ul li a {
+    border-top: 1px solid #3D5667;
+    color: #A5BDCC;
+    display: block;
+    padding: 1rem;
+    margin: 0 1rem;
+    position: relative;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  ul li ul li a {
+    display: block;
+    border: none;
+    padding: 0.8rem 2rem;
+    position: relative;
+    &:hover {
+      text-decoration: none;
+    }
+  }  
+  ul li ul li:last-child a {
+    margin-bottom: 1rem;
+  }
+  ul li svg {
+    display: block;
+    position: absolute;
+      top: calc(50% - 8px); //center in container then adjust for height of icon
+    right: 1rem;
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+  }
+  ul li > a.collapsed svg {
+    transform: rotate(0deg);
+  }
+  .screwhead {
+    text-align: center;
+    a {
+      padding: .5rem;
+      margin: .5rem;
+      display: block;
+    }
+    svg path {
+      fill: #A5BDCC;
+    }
+  }
 
-.nav-menu ul li:first-child a {
-  border-top: none;
-}
-.nav-menu ul li ul li a {
-  display: block;
-  border: none;
-  padding: 0.8rem 2rem;
-  position: relative;
-}
-.nav-menu ul li ul li:last-child a {
-  margin-bottom: 1rem;
-}
-.nav-menu ul li a:hover {
-  text-decoration: none;
-}
-.nav-menu ul li svg {
-  display: block;
-  position: absolute;
-  top: 50%;
-  right: 1rem;
-  transform: translateY(-50%);
-  transition: transform 0.3s ease;
 }
